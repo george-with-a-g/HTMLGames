@@ -1,0 +1,26 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    width:100vw;
+    background-color:rgb(228,224,215);
+}
+p{
+    font-size: 10vw;
+}
+.heroContinued{
+    min-height:100vh;
+}
+.separator {
+	display: block;
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	width: 100%;
+	height: 150px;
+	fill: rgb(228,224,215);
+}

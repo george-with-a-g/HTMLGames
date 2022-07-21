@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Swiper -->
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+      });
+    </script>
+  </body>
+</html>
+
+
+<!--
+https://assets.website-files.com/62bdc71c057cb67c71e552aa/62bdf10c9caef2f43f6fac71_62ba2104d647ec85f601882c_pexels-cottonbro-7437094.jpeg
+https://assets.website-files.com/62bdc71c057cb67c71e552aa/62bdf0fe985d3ff7fc1fd0c3_62ba212cf0df657c5a8258fd_pexels-cottonbro-7441745.jpeg
+https://assets.website-files.com/62bdc71c057cb67c71e552aa/62bdf0f7904e7cee3910f1dd_62ba20ccf0df650d368255f0_pexels-cottonbro-7439121.jpeg
+-->

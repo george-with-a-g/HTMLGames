@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset = "UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width", initial-scale=1.0" />	
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/css/splide.min.css">
+        <style>
+            .splide__arrow.splide__arrow--next, .splide__arrow.splide__arrow--prev, .splide__pagination {
+                    display: none;
+            }
+
+            .splide *:focus { outline: none; }
+        </style>
+        <link rel="stylesheet" href="style.css">
+        <title>Advanced Slider</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="cursor">
+                <div class="cursor_dot1"></div>
+                <div class="cursor_dot2">
+                    <p class="cursor__text">DRAG</p>
+                </div>
+            </div>
+            <section class="hero_title">
+                <h1>
+                    Some<br/> random images
+                </h1>
+                <p>And what I think is a cool slider.</p>
+            </section>
+            <section class="slider section">
+
+                <svg class="slider_wave" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 804 50.167" enable-background="new 0 0 804 50.167" xml:space="preserve">
+                    <path d="M804,0v16.671c0,0-204.974,33.496-401.995,33.496C204.974,50.167,0,16.671,0,16.671V0H804z"></path>
+                </svg>
+
+                <div class="splide">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <img src="./img1.jpeg" class="splide__img" />
+                            </div>
+                            <div class="splide__slide">
+                                <img src="./img2.jpeg" class="splide__img" />
+                            </div>
+                            <div class="splide__slide">
+                                <img src="./img3.jpeg" class="splide__img" />
+                            </div>
+                            <div class="splide__slide">
+                                <img src="./img4.jpeg" class="splide__img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <svg class="slider_wave2" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 804 50.167" enable-background="new 0 0 804 50.167" xml:space="preserve">
+                    <path d="M804,0v16.671c0,0-204.974,33.496-401.995,33.496C204.974,50.167,0,16.671,0,16.671V0H804z"></path>
+                </svg>
+
+            </section>
+
+            <div class="slider_buttons">
+                <button id="prevBtn" class="prev-splide" >
+                    <svg class="button_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 18">
+                        <path  d="M23.999,8H5.481c5.009-2.91,6.349-7.311,6.416-7.548L9.976-0.102C9.9,0.156,8.03,6.213-0.073,8.024L0.146,9
+                                l-0.218,0.976C8.03,11.787,9.9,17.844,9.976,18.101l1.922-0.554C11.83,17.31,10.49,12.91,5.481,10h18.518V8z"></path>
+                    </svg>
+                </button>
+
+                <button id="nextBtn" class="next-splide" >
+                    <svg class="button_svg_rotate" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 18">
+                        <path  d="M23.999,8H5.481c5.009-2.91,6.349-7.311,6.416-7.548L9.976-0.102C9.9,0.156,8.03,6.213-0.073,8.024L0.146,9
+                                l-0.218,0.976C8.03,11.787,9.9,17.844,9.976,18.101l1.922-0.554C11.83,17.31,10.49,12.91,5.481,10h18.518V8z"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"></script>
+        <script>
+
+            var elms = document.getElementsByClassName( 'splide' );
+            for ( var i = 0, len = elms.length; i < len; i++ ) {
+                    new Splide( elms[ i ], {
+                    perPage: 3,
+                    perMove: 1,
+                    type   : 'loop',
+                    focus  : 'center',
+                    breakpoints: {
+                        767: {
+                            perPage: 1,
+                        }
+                    }
+                    } ).mount();
+            }
+
+            // All Slliders
+            $('.next-splide').click(function() {
+                    console.log("clicked next")
+                    var y = document.getElementsByClassName('splide__arrow--next')[0].click();
+                    //$(this).closest('.section').find('.splide__arrow.splide__arrow--next').click();
+                    //y.find('.splide__arrow.splide__arrow--next').click();
+            });
+            $('.prev-splide').click(function() {
+                    console.log("clicked previous")
+                    var y = document.getElementsByClassName('splide__arrow--prev')[0].click();
+                    //console.log($(this).closest('.section').innerHTML)
+                    //$(this).closest('.section').find('.splide__arrow.splide__arrow--prev').click();
+                    //y.find('.splide__arrow.splide__arrow--prev').click();
+            });
+        </script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
+
+<!-- 
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 804 50.167" enable-background="new 0 0 804 50.167" xml:space="preserve">
+    <path fill="#E9C6DD" d="M804,0v16.671c0,0-204.974,33.496-401.995,33.496C204.974,50.167,0,16.671,0,16.671V0H804z"></path>
+    </svg>
+-->

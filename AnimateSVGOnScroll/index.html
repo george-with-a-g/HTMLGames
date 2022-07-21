@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset = "UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width", initial-scale=1.0" />	
+        <link rel="stylesheet" href="style.css">
+        <title>Welcome </title>
+    </head>
+
+    <body>
+
+        <section class="hero">
+            <p>Crafting</p>
+            <p>Transcendance</p>
+        </section>
+
+        <svg class="separator separator--up" width="100%" height="100%" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path 
+                        class="separator__path path-anim" 
+                        d="M 0 0 C 40 0 60 0 100 0 L 0 0 Z" 
+                        data-path-to="M 0 0 C 40 10 60 10 100 0 L 0 0 Z" 
+                        vector-effect="non-scaling-stroke" 
+                />
+        </svg>
+
+        <section class="heroContinued">
+            <svg class="image-clip" width="100%" height="100%" viewBox="0 0 500 750">
+                    <defs>
+                            <clipPath id="shape1">
+                                    <path 
+                                            class="path-anim" 
+                                            d="M 0 0 L 500 0 C 500 599.6 500 677.1 500 750 L 0 750 C 0 205 0 105 0 0 Z"
+                                            data-path-to="M 0 0 L 500 0 C 331 608 485 551 500 750 L 0 750 C 120 281 7 296 0 0 Z" 
+                                    />
+                            </clipPath>
+                    </defs>
+                    <image 
+                        clip-path="url(#shape1)" 
+                        xlink:href="APreyGotHisHunt.jpeg" 
+                        x="0" y="0" 
+                        width="100%" 
+                        height="100%"
+                    />
+            </svg>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="app.js"> </script>
+    </body>
+
+</html>
+<!--
+<svg class="animate-svg" width="100%" height="100%" viewBox="0 0 100 10" preserveAspectRatio="none"> 
+    <path class="animate-path" data-path-to="M 0 0 C 29 6 78 17 100 0 L 100 10 H 0 Z" vector-effect="non-scaling-stroke" 
+    d="M 0 0 C 20.8336 2.288 65.3792 11.0608 100 0 L 100 10 H 0 Z" fill="currentColor">
+    </path> 
+</svg>
+
+
+
+<svg class="image-clip" width="500px" height="750px" viewBox="0 0 500 750">
+        <defs>
+                <clipPath id="shape1">
+                        <path 
+                                class="path-anim" 
+                                d="M 0 0 L 500 0 C 500 599.6 500 677.1 500 750 L 0 750 C 0 205 0 105 0 0 Z"
+                                data-path-to="M 0 0 L 500 0 C 331 608 485 551 500 750 L 0 750 C 120 281 7 296 0 0 Z" 
+                        />
+                </clipPath>
+        </defs>
+        <image 
+            clip-path="url(#shape1)" 
+            xlink:href="APreyGotHisHunt.jpeg" 
+            x="0" y="0" 
+            width="500" 
+            height="750"
+        />
+</svg>
+-->
