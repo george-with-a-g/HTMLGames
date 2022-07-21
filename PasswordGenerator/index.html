@@ -9,7 +9,46 @@
     </head>
 
     <body>
+        <div class="pw_container">
 
+            <div class="pw_header">
+                <div class="pw"> 
+                    1njsjkanu38@
+                    <button>Copy</button>
+                </div>
+            </div>
+
+            <div class="pw_body">
+                <div class="form_control">
+                    <label for="length">Password length.</label>
+                    <input id="length" value="20" type="number" min="4" max="40" />
+                </div>
+
+                <div class="form_control">
+                    <label for="upper">Contain uppercase letters.</label>
+                    <input id="upper" type="checkbox" />
+                </div>
+
+                <div class="form_control">
+                    <label for="lower">Contain lowercase letters.</label>
+                    <input id="lower" type="checkbox" />
+                </div>
+
+                <div class="form_control">
+                    <label for="number">Contain numbers.</label>
+                    <input id="number" type="checkbox" />
+                </div>
+
+                <div class="form_control">
+                    <label for="symbol">Contain symbols.</label>
+                    <input id="symbol" type="checkbox" />
+                </div>
+                <button class="generate" id="generate">
+                    Generate Password
+                </button>
+            </div>
+
+        </div>
     </body>
 
 </html>
