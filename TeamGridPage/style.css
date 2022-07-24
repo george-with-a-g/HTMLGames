@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .grid_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .grid_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+.user_card > img{
+    transition: 1s all ease;
+}
+
+.user_card img{
+    border-radius:10px;
+    height: 474px;
+}
+
+.user_name_wrapper{
+    position: relative;
+    width: fit-content;
+}
+
+.user_name{
+    font-size: 21px;
+    width: fit-content;
+    position: relative;
+    padding: 0 6px;
+    z-index: 100;
+    color: black;
+    background-color: transparent;
+}
+
+.user_name_background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0%;
+    height:100%;
+    background-color: yellow;
+    transition: .6s ease;
+}
+
+.user_card:hover .user_name_background{
+    width: 100%;
+}
+
+.user_role, .user_description{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .card_clicked{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: black;
+        padding: 12px;
+    }
+    .card_clicked .user_name{
+        color: hsl(75, 100%, 53%);
+        font-size: 40px;
+    }
+    .card_clicked .user_role{
+        margin-top: 14px;
+        margin-bottom: 17px;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .user_description{
+        font-size: 13px;
+    }
+    .card_clicked .user_card_wrapper{
+        padding: 21px;
+        background-color: black;
+        color: hsl(75, 100%, 53%);
+    }
+    .card_clicked img{
+        width: 95vw;
+        height: 50vh;
+        object-fit: cover;
+        object-position: 100% 0%;
+        border-radius: 10px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .card_clicked{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        z-index: 1000;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: black;
+        padding: 12px;
+        height: 100vh;
+    }
+    .card_clicked .user_name{
+        color: hsl(75, 100%, 53%);
+        font-size: 70px;
+    }
+    .card_clicked img{
+        width: 45vw;
+        height: 98vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .card_clicked .user_role{
+        margin-top: 20px;
+        margin-bottom: 24px;
+        font-size: 21px;
+        font-weight: normal;
+    }
+    .user_description{
+        font-size: 21px;
+    }
+    .card_clicked .user_card_wrapper{
+        padding: 29px;
+        background-color: black;
+        color: hsl(75, 100%, 53%);
+    }
+}
+
+.card_clicked .user_role, .card_clicked .user_description {
+    display: flex;
+}
+.card_clicked .user_name_background{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        padding: 80px 32px;
+    }
+
+    h1{
+        font-size: 15vw;
+        letter-spacing: -2px;
+    }
+    .user_card img{
+        border-radius:10px;
+        height: 274px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    h1{
+        font-size: 100px;
+        letter-spacing: -2px;
+    }
+    main{
+        padding: 103px 154px;
+    }
+}
+
