@@ -1,3 +1,32 @@
+/*
+    ORIGINAL COLOR PALLETTE 
+        --body_background_color: white;
+        --header_border_bottom_color: black;
+        --header_background_color: white;
+        --circle_container_border_bottom_color: black;
+        --circle_border_style: solid;
+        --vertical_line_background_color: black;
+        --horizontal_line_background_color: black;
+        --circle_border_color: black;
+        --plane_border_top_background_color: black;
+        --plane_background_color: white;
+        --footer_background_color: black;
+        --main_font_color: #fff;
+ */
+:root{
+    --body_background_color: #061831;
+    --header_border_bottom_color: #00ffdc;
+    --header_background_color: #061831;
+    --circle_container_border_bottom_color: #00ffdc;
+    --circle_border_style: dashed;
+    --vertical_line_background_color: #00ffdc;
+    --horizontal_line_background_color: #00ffdc;
+    --circle_border_color: #00ffdc;
+    --plane_border_top_background_color: #00ffdc;
+    --plane_background_color: #061831;
+    --footer_background_color: black;
+    --main_font_color: #00ffdc;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 *, *::before, *::after{
     margin: 0;
@@ -8,14 +37,15 @@
 }
 body{
     font-family: "Poppins", sans-serif;
+    background-color: var(--body_background_color);
 }
 section{
     position: relative;
     width: 100%;
     min-height: 100vh;
 }
-h1, p{
-    color: #fff;
+h1, p, li{
+    color: var(--main_font_color);
     mix-blend-mode: difference;
 }
 .header{
@@ -24,10 +54,10 @@ h1, p{
     left: 0;
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--header_border_bottom_color);
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: var(--header_background_color);
 }
 .header_container{
     width: 90%;
@@ -48,7 +78,7 @@ nav ul{
     top: 50px;
     height: calc(100vh - 100px);
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--circle_container_border_bottom_color);
 }
 
 .vertical__line{
@@ -57,7 +87,7 @@ nav ul{
     left: 50%;
     width: 1px;
     height: 100%;
-    background-color: black;
+    background-color: var(--vertical_line_background_color);
     opacity: .4;
 }
 
@@ -67,7 +97,7 @@ nav ul{
     left: 0%;
     width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: var(--horizontal_line_background_color);
     opacity: .4;
 }
 
@@ -79,7 +109,6 @@ nav ul{
     width: 90%;
     height: 100%;
     max-width: 1200px;
-    /* background-color: red;*/
 }
 
 .circle{
@@ -90,7 +119,7 @@ nav ul{
     transform: translate(-50%, -50%);
     width: 32vh;
     height: 32vh;
-    border: 1px dashed black;
+    border: 1px var(--circle_border_style) var(--circle_border_color);
     border-radius: 50%;
     will-change: transform;
 }
@@ -105,10 +134,10 @@ nav ul{
 }
 
 .plane{
-    border-top: 1px solid black;
+    border-top: 1px solid var(--plane_border_top_background_color);
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: var(--plane_background_color);
 }
 
 .plane__one{
@@ -149,7 +178,7 @@ nav ul{
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: var(--footer_background_color);
 }
 
 
