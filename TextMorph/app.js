@@ -3,7 +3,7 @@ String.prototype.replaceAt = function(index, replacement) {
 }
 
 let start_text = "Hello World!"
-let end_text = "Yello George!"
+let end_text = "Bye George!"
 let show_text = start_text
 
 const randomCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+='
